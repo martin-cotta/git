@@ -68,3 +68,12 @@ To change the last commit, you can simply commit again, using the `--amend` flag
 git commit --amend -m "New and correct message"
 ```
 
+## Undo the last commit(s)
+
+```sh
+# Just move HEAD one commit down (keep changes)
+git reset --soft HEAD~1
+# Reset the index and working tree (don't keep changes)
+git reset --hard HEAD~1
+```
+
