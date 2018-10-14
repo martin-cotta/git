@@ -43,3 +43,20 @@ fi
 # Push the corrected history to remote
 $ git push --force --tags origin 'refs/heads/*'
 ```
+
+## Manually merge a GitHub PR
+
+Create a PR in GitHub to merge branch `release\1.0.0` back to `master`
+
+```sh
+git checkout release/1.0.0
+git pull
+git submodule update --init
+
+git checkout master
+git pull
+
+git merge --no-ff release/1.0.0
+git push origin master
+```
+
