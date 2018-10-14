@@ -60,3 +60,11 @@ git merge --no-ff release/1.0.0
 git push origin master
 ```
 
+## Amending the last commit
+
+To change the last commit, you can simply commit again, using the `--amend` flag:
+
+```sh
+git commit --amend -m "New and correct message"
+```
+
