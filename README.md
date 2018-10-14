@@ -4,27 +4,27 @@
 
 ```sh
 # Delete local branch
-git branch -delete feature/name # or
-git branch -d feature/name
+$ git branch -delete feature/name # or
+$ git branch -d feature/name
 
 # Delete local branch (regardless of its push and merge status)
-git branch --delete --force feature/name # or
-git branch -D feature/name
+$ git branch --delete --force feature/name # or
+$ git branch -D feature/name
 
 # Delete remote branch (or tag)
-git push origin --delete feature/name # or
-git push origin :feature/name
+$ git push origin --delete feature/name # or
+$ git push origin :feature/name
 ```
 
 ## Update author info
 
 ```sh
 # bare clone the repo
-git clone --bare https://github.com/user/repo.git
-cd repo.git
+$ git clone --bare https://github.com/user/repo.git
+$ cd repo.git
 
 # rewrite author info (update OLD_EMAIL, CORRECT_NAME & CORRECT_EMAIL before run it)
-git filter-branch --env-filter '
+$ git filter-branch --env-filter '
 OLD_EMAIL="your-old-email@example.com"
 CORRECT_NAME="Your Correct Name"
 CORRECT_EMAIL="your-correct-email@example.com"
@@ -41,5 +41,5 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 
 # Push the corrected history to remote
-git push --force --tags origin 'refs/heads/*'
+$ git push --force --tags origin 'refs/heads/*'
 ```
