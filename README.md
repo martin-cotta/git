@@ -77,3 +77,12 @@ git reset --soft HEAD~1
 git reset --hard HEAD~1
 ```
 
+## Delete a tag
+
+```sh
+# delete local tag
+git tag -d tagname
+
+# delete remote tag
+git push origin :refs/tags/tagname
+```
